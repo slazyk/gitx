@@ -17,6 +17,7 @@
 #import "PBGitDefaults.h"
 #import "PBCloneRepositoryPanel.h"
 #import "Sparkle/SUUpdater.h"
+#import "RecentsWindowController.h"
 
 @implementation ApplicationController
 
@@ -106,14 +107,13 @@
     // to bring the launched documents to the front
     for (PBGitRepository *document in launchedDocuments)
         [document showWindows];
-
+	
 	if (![[NSApplication sharedApplication] isActive])
 		return;
-
-	// The current directory was not enabled or could not be opened (most likely it’s not a git repository).
-	// show an open panel for the user to select a repository to view
-	if ([PBGitDefaults showOpenPanelOnLaunch] && !hasOpenedDocuments)
-		[[PBRepositoryDocumentController sharedDocumentController] openDocument:self];
+	
+	if ([PBGitDefaults showOpenPanelOnLaunch] && !hasOpenedDocuments) {
+		[self showRecentRepositories];
+	}
 }
 
 - (void) windowWillClose: sender
@@ -300,7 +300,6 @@
     }
 }
 
-
 /**
     Implementation of the applicationShouldTerminate: method, used here to
     handle the saving of changes in the application managed object context
@@ -363,6 +362,24 @@
 			[PBGitDefaults setPreviousDocumentPaths:paths];
 		}
 	}
+}
+
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag
+{
+	if (!flag) {
+		[self showRecentRepositories];
+	}
+	return YES;
+}
+
+- (void)showRecentRepositories
+{
+	if (!recentsWindowController) {
+		recentsWindowController = [[RecentsWindowController alloc] initWithWindowNibName:@"RecentsWindow"];
+	}
+	[recentsWindowController reload];
+	[[recentsWindowController window] center];
+	[recentsWindowController showWindow:self];
 }
 
 /**
