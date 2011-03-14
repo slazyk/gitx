@@ -10,6 +10,7 @@
 #import "PBGitRepository.h"
 
 @class PBCloneRepositoryPanel;
+@class RecentsWindowController;
 
 @interface ApplicationController : NSObject
 {
@@ -20,6 +21,7 @@
 	NSManagedObjectContext *managedObjectContext;
 
 	PBCloneRepositoryPanel *cloneRepositoryPanel;
+	RecentsWindowController *recentsWindowController;
 }
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
@@ -28,6 +30,7 @@
 
 - (IBAction)openPreferencesWindow:(id)sender;
 - (IBAction)showAboutPanel:(id)sender;
+- (void)showRecentRepositories;
 
 - (IBAction)installCliTool:(id)sender;
 

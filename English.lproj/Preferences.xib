@@ -335,7 +335,7 @@
 						<object class="NSButtonCell" key="NSCell" id="456188813">
 							<int key="NSCellFlags">-2080244224</int>
 							<int key="NSCellFlags2">0</int>
-							<string key="NSContents">Show "Open" panel on launch</string>
+							<string key="NSContents">Show recent repositories on launch</string>
 							<reference key="NSSupport" ref="734450335"/>
 							<reference key="NSControlView" ref="68472633"/>
 							<int key="NSButtonFlags">1211912703</int>
@@ -2383,6 +2383,13 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">QuartzCore.framework/Headers/CIImageProvider.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">ScriptingBridge.framework/Headers/SBApplication.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

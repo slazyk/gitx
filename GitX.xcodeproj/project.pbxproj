@@ -76,6 +76,8 @@
 		65D58BC7132D48C2003F7290 /* PBResetSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D58BC6132D48C0003F7290 /* PBResetSheet.m */; };
 		770B37ED0679A11B001EADE2 /* GitTest_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* GitTest_DataModel.xcdatamodel */; };
 		77C8280E06725ACE000B614F /* ApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* ApplicationController.m */; };
+		7FCD1C3612E25E3F00542C27 /* RecentsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD1C3512E25E3F00542C27 /* RecentsWindowController.m */; };
+		7FCD1C3912E25E5500542C27 /* RecentsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FCD1C3812E25E5500542C27 /* RecentsWindow.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -374,6 +376,9 @@
 		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		77C8280B06725ACE000B614F /* ApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationController.h; sourceTree = "<group>"; };
 		77C8280C06725ACE000B614F /* ApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationController.m; sourceTree = "<group>"; };
+		7FCD1C3412E25E3F00542C27 /* RecentsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentsWindowController.h; sourceTree = "<group>"; };
+		7FCD1C3512E25E3F00542C27 /* RecentsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentsWindowController.m; sourceTree = "<group>"; };
+		7FCD1C3812E25E5500542C27 /* RecentsWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentsWindow.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* GitX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		911111E10E58BD5A00BF76B4 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/RepositoryWindow.xib; sourceTree = "<group>"; };
@@ -852,6 +857,7 @@
 				F58DB55F10566E3900CFDF4A /* PBGitSidebarView.xib */,
 				D8022FE711E124A0003C21F6 /* PBGitXMessageSheet.xib */,
 				65D58BC3132D27A7003F7290 /* PBResetSheet.xib */,
+				7FCD1C3812E25E5500542C27 /* RecentsWindow.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1022,6 +1028,8 @@
 				D82F435F111B9C6D00A25A39 /* Sheets */,
 				77C8280B06725ACE000B614F /* ApplicationController.h */,
 				77C8280C06725ACE000B614F /* ApplicationController.m */,
+				7FCD1C3412E25E3F00542C27 /* RecentsWindowController.h */,
+				7FCD1C3512E25E3F00542C27 /* RecentsWindowController.m */,
 				93CB42C00EAB7B2200530609 /* PBGitDefaults.h */,
 				93CB42C10EAB7B2200530609 /* PBGitDefaults.m */,
 				F57CC43F0E05E496000472E2 /* PBGitWindowController.h */,
@@ -1446,6 +1454,7 @@
 				316E7202131EE9C600AFBB36 /* list_Template.png in Resources */,
 				316E7203131EE9C600AFBB36 /* sidebar_Template.png in Resources */,
 				65D58BC4132D27A8003F7290 /* PBResetSheet.xib in Resources */,
+				7FCD1C3912E25E5500542C27 /* RecentsWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1616,6 +1625,7 @@
 				217FF0BB12A1CB3300785A65 /* PBGitResetController.m in Sources */,
 				217FF0BE12A1CB3E00785A65 /* PBRevealWithFinderCommand.m in Sources */,
 				65D58BC7132D48C2003F7290 /* PBResetSheet.m in Sources */,
+				7FCD1C3612E25E3F00542C27 /* RecentsWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
