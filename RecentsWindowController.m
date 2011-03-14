@@ -9,17 +9,42 @@
 #import "RecentsWindowController.h"
 #import "PBRepositoryDocumentController.h"
 
+#import <sys/stat.h>
+
 @implementation RecentsWindowController
 
 @synthesize recentDocumentURLs;
 
+- (void)updateDateLabel:(id)sender {
+	NSInteger selectedRow = [tableView selectedRow];
+	if (selectedRow >= 0) {
+		NSURL *repoURL = [recentDocumentURLs objectAtIndex:selectedRow];
+        
+        struct stat output;
+        if(stat([[repoURL path] UTF8String], &output)) {
+            [dateLabel setStringValue:[NSString stringWithFormat:@"Last modified: (unknown)"]];
+        } else {
+            NSDate *date = [NSDate dateWithTimeIntervalSince1970:output.st_mtime];
+            NSDateFormatter *f = [NSDateFormatter new];
+            [f setDateStyle: NSDateFormatterLongStyle];
+            [f setTimeStyle: NSDateFormatterShortStyle];
+            [f setDoesRelativeDateFormatting: YES];
+            [dateLabel setStringValue:[NSString stringWithFormat:@"Last modified: %@", [f stringFromDate:date]]];
+        }
+	}
+
+}
+
 - (void)windowDidLoad
 {
+    [[self window] setContentBorderThickness: 48 forEdge: NSMinYEdge];
 	self.recentDocumentURLs = [[NSDocumentController sharedDocumentController] recentDocumentURLs];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowDidBecomeMain:) name:NSWindowDidBecomeMainNotification object:nil];
 	
 	[tableView setDoubleAction:@selector(openSelectedRepository:)];
 	[tableView setTarget:self];
+    [self updateDateLabel: self];
+    [versionLabel setStringValue: [@"Version " stringByAppendingString: [[[NSBundle mainBundle] infoDictionary] objectForKey: @"CFBundleShortVersionString"]]];
 }
 
 - (void)reload
@@ -67,8 +92,8 @@
 		NSString *path = [[URL path] stringByAbbreviatingWithTildeInPath];
 		NSString *title = [NSString stringWithFormat:@"%@\n%@", name, path];
 		NSMutableAttributedString *attributedTitle = [[[NSMutableAttributedString alloc] initWithString:title] autorelease];
-		[attributedTitle addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSFont boldSystemFontOfSize:12.0], NSFontAttributeName, nil] range:NSMakeRange(0, [name length])];
-		[attributedTitle addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSFont systemFontOfSize:11.0], NSFontAttributeName, nil] range:NSMakeRange([name length], [title length] - [name length])];
+		[attributedTitle addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSFont systemFontOfSize:12.0], NSFontAttributeName, nil] range:NSMakeRange(0, [name length])];
+		[attributedTitle addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSFont systemFontOfSize:10.0], NSFontAttributeName, nil] range:NSMakeRange([name length], [title length] - [name length])];
 		if (!selected) {
 			[attributedTitle addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSColor blackColor], NSForegroundColorAttributeName, nil] range:NSMakeRange(0, [name length])];
 			[attributedTitle addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSColor grayColor], NSForegroundColorAttributeName, nil] range:NSMakeRange([name length], [title length] - [name length])];
