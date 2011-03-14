@@ -13,11 +13,14 @@
 
 	NSArray *recentDocumentURLs;
 	IBOutlet NSTableView *tableView;
+    IBOutlet NSTextField *dateLabel;
+    IBOutlet NSTextField *versionLabel;
 }
 
 @property (nonatomic, retain) NSArray *recentDocumentURLs;
 
 - (IBAction)openSelectedRepository:(id)sender;
 - (void)reload;
+- (IBAction)updateDateLabel:(id)sender;
 
 @end
