@@ -410,6 +410,7 @@
 
 - (void) updateView
 {
+    [self refresh: nil];
 	[self updateKeys];
 }
 
