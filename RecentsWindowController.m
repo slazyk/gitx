@@ -44,7 +44,12 @@
 	[tableView setDoubleAction:@selector(openSelectedRepository:)];
 	[tableView setTarget:self];
     [self updateDateLabel: self];
-    [versionLabel setStringValue: [@"Version " stringByAppendingString: [[[NSBundle mainBundle] infoDictionary] objectForKey: @"CFBundleShortVersionString"]]];
+    NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+    NSString *ver = [info objectForKey: @"CFBundleGitVersion"];
+    if (ver == nil) {
+        ver = [info objectForKey: @"CFBundleVersion"];
+    }
+    [versionLabel setStringValue: [@"Version " stringByAppendingString: ver]];
 }
 
 - (void)reload
