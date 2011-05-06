@@ -18,6 +18,7 @@
 #define kPublicGist @"PBGistPublic"
 #define kShowWhitespaceDifferences @"PBShowWhitespaceDifferences"
 #define kRefreshAutomatically @"PBRefreshAutomatically"
+#define kUseAskPasswd @"PBUseAskPasswd"
 #define kOpenCurDirOnLaunch @"PBOpenCurDirOnLaunch"
 #define kShowOpenPanelOnLaunch @"PBShowOpenPanelOnLaunch"
 #define kShouldCheckoutBranch @"PBShouldCheckoutBranch"
@@ -28,6 +29,8 @@
 #define kBranchFilterState @"PBBranchFilter"
 #define kHistorySearchMode @"PBHistorySearchMode"
 #define kSuppressedDialogWarnings @"Suppressed Dialog Warnings"
+#define kUseITerm2 @"PBUseITerm2"
+#define kITerm2Available @"PBITerm2Available"
 
 
 @implementation PBGitDefaults
@@ -52,6 +55,8 @@
 	[defaultValues setObject:[NSNumber numberWithBool:YES]
 					  forKey:kRefreshAutomatically];
 	[defaultValues setObject:[NSNumber numberWithBool:YES]
+					  forKey:kUseAskPasswd];
+	[defaultValues setObject:[NSNumber numberWithBool:YES]
 					  forKey:kOpenCurDirOnLaunch];
 	[defaultValues setObject:[NSNumber numberWithBool:YES]
 					  forKey:kShowOpenPanelOnLaunch];
@@ -61,6 +66,10 @@
                       forKey:kOpenPreviousDocumentsOnLaunch];
 	[defaultValues setObject:[NSNumber numberWithInteger:kGitXBasicSeachMode]
                       forKey:kHistorySearchMode];
+	[defaultValues setObject:[NSNumber numberWithBool:NO]
+					  forKey:kUseITerm2];
+	[defaultValues setObject:[NSNumber numberWithBool:NO]
+					  forKey:kITerm2Available];
 	[[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
 }
 
@@ -102,6 +111,11 @@
 + (BOOL) refreshAutomatically
 {
 	return [[NSUserDefaults standardUserDefaults] boolForKey:kRefreshAutomatically];
+}
+
++ (BOOL) useAskPasswd
+{
+	return [[NSUserDefaults standardUserDefaults] boolForKey:kUseAskPasswd];
 }
 
 + (BOOL)openCurDirOnLaunch
@@ -183,6 +197,28 @@
 	[[NSUserDefaults standardUserDefaults] setInteger:mode forKey:kHistorySearchMode];
 }
 
++ (BOOL) isUseITerm2
+{
+	[self isITerm2Available];
+	return [[NSUserDefaults standardUserDefaults] boolForKey:kUseITerm2];
+}
+
++ (BOOL) isITerm2Available 
+{
+	NSString *iTermPath = [[NSWorkspace sharedWorkspace] absolutePathForAppBundleWithIdentifier:@"com.googlecode.iterm2"];
+	[self setITerm2Available:[[NSFileManager defaultManager] fileExistsAtPath:iTermPath]];
+	
+	return [[NSUserDefaults standardUserDefaults] boolForKey:kITerm2Available];
+}
+
++ (void) setITerm2Available:(BOOL)iTerm2Available 
+{
+	if (!iTerm2Available)
+		[[NSUserDefaults standardUserDefaults] setBool:iTerm2Available forKey:kUseITerm2];
+	
+	[[NSUserDefaults standardUserDefaults] setBool:iTerm2Available forKey:kITerm2Available];
+	[[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 
 // Suppressed Dialog Warnings

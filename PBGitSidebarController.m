@@ -170,8 +170,9 @@ static NSString * const kObservingContextSubmodules = @"submodulesChanged";
 
 -(void)evaluateRemoteBadge:(PBGitSVRemoteItem *)remote
 {
-	NSLog(@"remote.title=%@",[remote title]);
-	[remote setAlert:[self remoteNeedFetch:[remote title]]];
+	DLog(@"remote.title=%@",[remote title]);
+    if([remote isKindOfClass:[PBGitSVRemoteItem class]])
+        [remote setAlert:[self remoteNeedFetch:[remote title]]];
 }
 
 -(NSNumber *)countCommintsOf:(NSString *)range
@@ -521,8 +522,11 @@ enum  {
     // get config
     BOOL hasSVN = [repository hasSvnRemote];
     [svnFetchButton setEnabled:hasSVN];
+    [svnFetchButton setHidden:!hasSVN];
     [svnRebaseButton setEnabled:hasSVN];
+    [svnRebaseButton setHidden:!hasSVN];
     [svnDcommitButton setEnabled:hasSVN];
+    [svnDcommitButton setHidden:!hasSVN];
 }
 
 - (IBAction) fetchPullPushAction:(id)sender

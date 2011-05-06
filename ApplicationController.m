@@ -32,7 +32,7 @@
 
 	if(![[NSBundle bundleWithPath:@"/System/Library/Frameworks/Quartz.framework/Frameworks/QuickLookUI.framework"] load])
 		if(![[NSBundle bundleWithPath:@"/System/Library/PrivateFrameworks/QuickLookUI.framework"] load])
-			NSLog(@"Could not load QuickLook");
+			DLog(@"Could not load QuickLook");
 
 	/* Value Transformers */
 	NSValueTransformer *transformer = [[PBNSURLPathUserDefaultsTransfomer alloc] init];
@@ -56,7 +56,7 @@
 	int serviceVersion = [[NSUserDefaults standardUserDefaults] integerForKey:@"Services Version"];
 	if (serviceVersion < 2)
 	{
-		NSLog(@"Updating services menu…");
+		DLog(@"Updating services menu…");
 		NSUpdateDynamicServices();
 		[[NSUserDefaults standardUserDefaults] setInteger:2 forKey:@"Services Version"];
 	}
@@ -67,10 +67,12 @@
 	[[SUUpdater sharedUpdater] setSendsSystemProfile:YES];
     [[SUUpdater sharedUpdater] setDelegate:self];
 
+    if ([PBGitDefaults useAskPasswd]) {
 	// Make sure Git's SSH password requests get forwarded to our little UI tool:
 	setenv( "SSH_ASKPASS", [[[NSBundle mainBundle] pathForResource: @"gitx_askpasswd" ofType: @""] UTF8String], 1 );
 	setenv( "DISPLAY", "localhost:0", 1 );
-
+    }
+       
 	[self registerServices];
 
     BOOL hasOpenedDocuments = NO;
@@ -431,7 +433,7 @@
 
 - (IBAction)reportAProblem:(id)sender
 {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://gitx.lighthouseapp.com/tickets"]];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/laullon/gitx/issues"]];
 }
 
 
