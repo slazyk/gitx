@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'GitTest' target in the 'GitTest' project
+// Prefix header for all source files of the 'GitX' target in the 'GitX' project
 //
 
 #ifdef __OBJC__
@@ -8,12 +8,12 @@
 
 #ifndef DLog
 #ifdef DEBUG
-#    define DLog(...) NSLog(__VA_ARGS__)
+#define DLog(...) NSLog(__VA_ARGS__)
 #else
-#    define DLog(...) /* */
+#define DLog(...) (void) 0
 #endif
 #endif
 
 #ifndef ALog
-#define ALog(...) DLog(__VA_ARGS__)
+#define ALog(...) NSLog(__VA_ARGS__)
 #endif
