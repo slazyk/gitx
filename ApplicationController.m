@@ -94,7 +94,7 @@
 		hasOpenedDocuments = YES;
 
     // open any documents that were open the last time the app quit
-    if ([PBGitDefaults openPreviousDocumentsOnLaunch]) {
+    if ([PBGitDefaults openPreviousDocumentsOnLaunch] && !hasOpenedDocuments) {
         for (NSString *path in [PBGitDefaults previousDocumentPaths]) {
             NSURL *url = [NSURL fileURLWithPath:path isDirectory:YES];
             NSError *error = nil;
@@ -405,6 +405,7 @@
 	}
 	[recentsWindowController reload];
 	[[recentsWindowController window] center];
+    [[recentsWindowController window] setExcludedFromWindowsMenu: YES];
 	[recentsWindowController showWindow:self];
 }
 

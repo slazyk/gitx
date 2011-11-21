@@ -78,16 +78,17 @@
 		47DBDBCA0E95016F00671A1E /* PBNSURLPathUserDefaultsTransfomer.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DBDBC90E95016F00671A1E /* PBNSURLPathUserDefaultsTransfomer.m */; };
 		551BF11E112F376C00265053 /* gitx_askpasswd_main.m in Sources */ = {isa = PBXBuildFile; fileRef = 551BF11D112F376C00265053 /* gitx_askpasswd_main.m */; };
 		551BF176112F3F4B00265053 /* gitx_askpasswd in Resources */ = {isa = PBXBuildFile; fileRef = 551BF111112F371800265053 /* gitx_askpasswd */; };
+		65007DBA147B0F9B00F9E3F5 /* GitX-reflection.png in Resources */ = {isa = PBXBuildFile; fileRef = 65007DB9147B0F9B00F9E3F5 /* GitX-reflection.png */; };
 		6561ED5D132E8F1600482FA0 /* GitX.png in Resources */ = {isa = PBXBuildFile; fileRef = 6561ED5C132E8F1600482FA0 /* GitX.png */; };
 		6561ED5F132ECB2F00482FA0 /* WelcomeBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6561ED5E132ECB2F00482FA0 /* WelcomeBg.png */; };
 		65D58BC4132D27A8003F7290 /* PBResetSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D58BC3132D27A7003F7290 /* PBResetSheet.xib */; };
 		65D58BC7132D48C2003F7290 /* PBResetSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D58BC6132D48C0003F7290 /* PBResetSheet.m */; };
 		770B37ED0679A11B001EADE2 /* GitTest_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* GitTest_DataModel.xcdatamodel */; };
 		77C8280E06725ACE000B614F /* ApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* ApplicationController.m */; };
-		89087CA613A3E46B00911503 /* PBWebCommitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89087CA513A3E46B00911503 /* PBWebCommitController.m */; };
-		8998B1C613A55B3500121729 /* PBWebStashController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8998B1C513A55B3500121729 /* PBWebStashController.m */; };
 		7FCD1C3612E25E3F00542C27 /* RecentsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD1C3512E25E3F00542C27 /* RecentsWindowController.m */; };
 		7FCD1C3912E25E5500542C27 /* RecentsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FCD1C3812E25E5500542C27 /* RecentsWindow.xib */; };
+		89087CA613A3E46B00911503 /* PBWebCommitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89087CA513A3E46B00911503 /* PBWebCommitController.m */; };
+		8998B1C613A55B3500121729 /* PBWebStashController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8998B1C513A55B3500121729 /* PBWebStashController.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -337,6 +338,7 @@
 		47DBDBC90E95016F00671A1E /* PBNSURLPathUserDefaultsTransfomer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBNSURLPathUserDefaultsTransfomer.m; sourceTree = "<group>"; };
 		551BF111112F371800265053 /* gitx_askpasswd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gitx_askpasswd; sourceTree = BUILT_PRODUCTS_DIR; };
 		551BF11D112F376C00265053 /* gitx_askpasswd_main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gitx_askpasswd_main.m; sourceTree = "<group>"; };
+		65007DB9147B0F9B00F9E3F5 /* GitX-reflection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "GitX-reflection.png"; path = "Images/GitX-reflection.png"; sourceTree = "<group>"; };
 		6561ED5C132E8F1600482FA0 /* GitX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GitX.png; path = Images/GitX.png; sourceTree = "<group>"; };
 		6561ED5E132ECB2F00482FA0 /* WelcomeBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WelcomeBg.png; path = Images/WelcomeBg.png; sourceTree = "<group>"; };
 		65D58BC3132D27A7003F7290 /* PBResetSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBResetSheet.xib; sourceTree = "<group>"; };
@@ -346,13 +348,13 @@
 		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		77C8280B06725ACE000B614F /* ApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationController.h; sourceTree = "<group>"; };
 		77C8280C06725ACE000B614F /* ApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationController.m; sourceTree = "<group>"; };
+		7FCD1C3412E25E3F00542C27 /* RecentsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentsWindowController.h; sourceTree = "<group>"; };
+		7FCD1C3512E25E3F00542C27 /* RecentsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentsWindowController.m; sourceTree = "<group>"; };
+		7FCD1C3812E25E5500542C27 /* RecentsWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentsWindow.xib; sourceTree = "<group>"; };
 		89087CA413A3E46500911503 /* PBWebCommitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBWebCommitController.h; sourceTree = "<group>"; };
 		89087CA513A3E46B00911503 /* PBWebCommitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebCommitController.m; sourceTree = "<group>"; };
 		8998B1AC13A55AC100121729 /* PBWebStashController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBWebStashController.h; sourceTree = "<group>"; };
 		8998B1C513A55B3500121729 /* PBWebStashController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebStashController.m; sourceTree = "<group>"; };
-		7FCD1C3412E25E3F00542C27 /* RecentsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentsWindowController.h; sourceTree = "<group>"; };
-		7FCD1C3512E25E3F00542C27 /* RecentsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentsWindowController.m; sourceTree = "<group>"; };
-		7FCD1C3812E25E5500542C27 /* RecentsWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentsWindow.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* GitX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		911111E10E58BD5A00BF76B4 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/RepositoryWindow.xib; sourceTree = "<group>"; };
@@ -769,6 +771,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				65007DB9147B0F9B00F9E3F5 /* GitX-reflection.png */,
 				311D4F571370CC640061CFD3 /* build_libgit2.sh */,
 				FA8DFF37131AEDD400C0F289 /* Start_iTerm2.applescript */,
 				6561ED5E132ECB2F00482FA0 /* WelcomeBg.png */,
@@ -1337,6 +1340,7 @@
 				6561ED5D132E8F1600482FA0 /* GitX.png in Resources */,
 				6561ED5F132ECB2F00482FA0 /* WelcomeBg.png in Resources */,
 				DDB8FEC413999C24001A9EE2 /* PBStashContentView.xib in Resources */,
+				65007DBA147B0F9B00F9E3F5 /* GitX-reflection.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

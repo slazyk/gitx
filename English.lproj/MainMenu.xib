@@ -918,6 +918,15 @@
 									<reference key="NSOnImage" ref="889736156"/>
 									<reference key="NSMixedImage" ref="37108609"/>
 								</object>
+								<object class="NSMenuItem" id="723698484">
+									<reference key="NSMenu" ref="640124300"/>
+									<string key="NSTitle">Welcome to GitX</string>
+									<string key="NSKeyEquiv">1</string>
+									<int key="NSKeyEquivModMask">1179648</int>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="889736156"/>
+									<reference key="NSMixedImage" ref="37108609"/>
+								</object>
 								<object class="NSMenuItem" id="1043736222">
 									<reference key="NSMenu" ref="640124300"/>
 									<string key="NSTitle">Bring All to Front</string>
@@ -1531,6 +1540,26 @@
 					</object>
 					<int key="connectionID">920</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">target: self</string>
+						<reference key="source" ref="723698484"/>
+						<reference key="destination" ref="859235683"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="723698484"/>
+							<reference key="NSDestination" ref="859235683"/>
+							<string key="NSLabel">target: self</string>
+							<string key="NSBinding">target</string>
+							<string key="NSKeyPath">self</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSSelectorName</string>
+								<string key="NS.object.0">showRecentRepositories</string>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">997</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -2044,6 +2073,7 @@
 							<reference ref="441209947"/>
 							<reference ref="1043736222"/>
 							<reference ref="894434726"/>
+							<reference ref="723698484"/>
 						</object>
 						<reference key="parent" ref="937798568"/>
 					</object>
@@ -2317,6 +2347,11 @@
 						<reference key="object" ref="1030240075"/>
 						<reference key="parent" ref="944982980"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">994</int>
+						<reference key="object" ref="723698484"/>
+						<reference key="parent" ref="640124300"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -2439,9 +2474,11 @@
 					<string>989.IBPluginDependency</string>
 					<string>991.IBPluginDependency</string>
 					<string>992.IBPluginDependency</string>
+					<string>994.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2572,7 +2609,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">993</int>
+			<int key="maxID">997</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
