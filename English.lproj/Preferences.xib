@@ -413,7 +413,7 @@
 					<object class="NSButton" id="68472633">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{18, 277}, {207, 18}}</string>
+						<string key="NSFrame">{{18, 277}, {244, 18}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="516324081"/>
@@ -421,7 +421,7 @@
 						<object class="NSButtonCell" key="NSCell" id="456188813">
 							<int key="NSCellFlags">-2080244224</int>
 							<int key="NSCellFlags2">0</int>
-							<string key="NSContents">Show "Open" panel on launch</string>
+							<string key="NSContents">Show recent repositories on launch</string>
 							<reference key="NSSupport" ref="734450335"/>
 							<reference key="NSControlView" ref="68472633"/>
 							<int key="NSButtonFlags">1211912703</int>

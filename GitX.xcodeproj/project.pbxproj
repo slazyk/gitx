@@ -84,6 +84,8 @@
 		77C8280E06725ACE000B614F /* ApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* ApplicationController.m */; };
 		89087CA613A3E46B00911503 /* PBWebCommitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89087CA513A3E46B00911503 /* PBWebCommitController.m */; };
 		8998B1C613A55B3500121729 /* PBWebStashController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8998B1C513A55B3500121729 /* PBWebStashController.m */; };
+		7FCD1C3612E25E3F00542C27 /* RecentsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD1C3512E25E3F00542C27 /* RecentsWindowController.m */; };
+		7FCD1C3912E25E5500542C27 /* RecentsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FCD1C3812E25E5500542C27 /* RecentsWindow.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -344,6 +346,9 @@
 		89087CA513A3E46B00911503 /* PBWebCommitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebCommitController.m; sourceTree = "<group>"; };
 		8998B1AC13A55AC100121729 /* PBWebStashController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBWebStashController.h; sourceTree = "<group>"; };
 		8998B1C513A55B3500121729 /* PBWebStashController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebStashController.m; sourceTree = "<group>"; };
+		7FCD1C3412E25E3F00542C27 /* RecentsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentsWindowController.h; sourceTree = "<group>"; };
+		7FCD1C3512E25E3F00542C27 /* RecentsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentsWindowController.m; sourceTree = "<group>"; };
+		7FCD1C3812E25E5500542C27 /* RecentsWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentsWindow.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* GitX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		911111E10E58BD5A00BF76B4 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/RepositoryWindow.xib; sourceTree = "<group>"; };
@@ -792,6 +797,7 @@
 				F58DB55F10566E3900CFDF4A /* PBGitSidebarView.xib */,
 				D8022FE711E124A0003C21F6 /* PBGitXMessageSheet.xib */,
 				65D58BC3132D27A7003F7290 /* PBResetSheet.xib */,
+				7FCD1C3812E25E5500542C27 /* RecentsWindow.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -964,6 +970,8 @@
 				8998B1AB13A55A9B00121729 /* Stash */,
 				77C8280B06725ACE000B614F /* ApplicationController.h */,
 				77C8280C06725ACE000B614F /* ApplicationController.m */,
+				7FCD1C3412E25E3F00542C27 /* RecentsWindowController.h */,
+				7FCD1C3512E25E3F00542C27 /* RecentsWindowController.m */,
 				93CB42C00EAB7B2200530609 /* PBGitDefaults.h */,
 				93CB42C10EAB7B2200530609 /* PBGitDefaults.m */,
 				F57CC43F0E05E496000472E2 /* PBGitWindowController.h */,
@@ -1301,6 +1309,7 @@
 				31460CD5124185BA00B90AED /* Source Code License.rtf in Resources */,
 				31460CD6124185BA00B90AED /* TODO in Resources */,
 				02B41A60123E307F00DFC531 /* PBCommitHookFailedSheet.xib in Resources */,
+				7FCD1C3912E25E5500542C27 /* RecentsWindow.xib in Resources */,
 				21230D821284D1CC0046E5A1 /* stash-icon.png in Resources */,
 				21230ED21285EB5A0046E5A1 /* PBArgumentPicker.xib in Resources */,
 				2123121E128735E90046E5A1 /* submodule-notmatching-index.png in Resources */,
@@ -1485,6 +1494,7 @@
 				89087CA613A3E46B00911503 /* PBWebCommitController.m in Sources */,
 				8998B1C613A55B3500121729 /* PBWebStashController.m in Sources */,
 				2CC9B39713E86B35002EA416 /* AIURLAdditions.m in Sources */,
+				7FCD1C3612E25E3F00542C27 /* RecentsWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
